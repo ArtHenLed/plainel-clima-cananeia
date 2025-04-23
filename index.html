@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=576, height=384">
+    <title>Previsão do Tempo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 576px;
+            height: 384px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: black;
+        }
+
+        .background {
+            position: absolute;
+            width: 576px;
+            height: 384px;
+            top: 0; left: 0;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 12px;
+        }
+        .titulo {
+            color: #000;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px #fff, 0 0 8px #fff;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            height: 58.5px; /* 45px + 30% */
+            margin-bottom: 10px;
+        }
+
+        .forecast {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 40px; /* afastamento maior entre cards */
+            margin-bottom: 25px;
+        }
+
+        .day-card {
+            background-color: rgba(255,255,255,0.85);
+            padding: 14px;
+            border-radius: 14px;
+            text-align: center;
+            width: 84px; /* Reduzido 30% */
+            box-shadow: 0 0 6px rgba(0,0,0,0.18);
+        }
+        .day-card h2 {
+            color: #222;
+            font-size: 18px;
+            margin: 0 0 8px 0;
+        }
+        .day-card img {
+            height: 60px; /* Tamanho original dos ícones */
+            margin-bottom: 10px;
+        }
+        .day-card .temp {
+            color: #222;
+            font-size: 27px; /* Temperatura aumentada em 30% */
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img class="background" src="ilha_comprida_bg_cortada.jpg" alt="Fundo Cananéia" />
+    <div class="container">
+        <div class="header">
+            <div class="titulo">Cananéia</div>
+            <img src="marcadagua.jpg" alt="Logo" class="logo" />
+        </div>
+        <div class="forecast">
+            
+        <div class="day-card">
+            <h2>Quarta-feira, 23/04</h2>
+            <img src="https://cdn.weatherapi.com/weather/64x64/day/176.png" alt="Ícone do clima" />
+            <div class="temp">21.1°C / 35.2°C</div>
+        </div>
+        
+
+        <div class="day-card">
+            <h2>Quinta-feira, 24/04</h2>
+            <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Ícone do clima" />
+            <div class="temp">20.8°C / 33.2°C</div>
+        </div>
+        
+
+        <div class="day-card">
+            <h2>Sexta-feira, 25/04</h2>
+            <img src="https://cdn.weatherapi.com/weather/64x64/day/176.png" alt="Ícone do clima" />
+            <div class="temp">21.0°C / 31.0°C</div>
+        </div>
+        
+
+        <div class="day-card">
+            <h2>Sábado, 26/04</h2>
+            <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Ícone do clima" />
+            <div class="temp">20.7°C / 35.3°C</div>
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>
