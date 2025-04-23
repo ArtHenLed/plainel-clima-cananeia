@@ -77,3 +77,24 @@
             height: 60px; /* Tamanho original dos ícones */
             margin-bottom: 10px;
         }
+        .day-card .temp {
+            color: #222;
+            font-size: 27px; /* Temperatura aumentada em 30% */
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img class="background" src="cananeia_bg_cortada.jpg" alt="Fundo Cananéia" />
+    <div class="container">
+        <div class="header">
+            <div class="titulo">Cananéia</div>
+            <img src="marcadagua.jpg" alt="Logo" class="logo" />
+        </div>
+        <div class="forecast">
+            {{PREVISAO_TEMPO}}
+        </div>
+    </div>
+</body>
+</html>
