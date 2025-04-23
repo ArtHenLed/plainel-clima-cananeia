@@ -26,8 +26,9 @@
         .container {
             position: relative;
             z-index: 1;
-            width: 100%;
+            width: 576px;
             height: 100%;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -48,40 +49,42 @@
         .logo {
             display: block;
             margin: 0 auto;
-            height: 58.5px; /* 45px + 30% */
+            height: 120px; /* AUMENTADO para 120px */
             margin-bottom: 10px;
         }
 
         .forecast {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-end;
-            gap: 40px; /* afastamento maior entre cards */
             margin-bottom: 25px;
+            padding: 0 14px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .day-card {
             background-color: rgba(255,255,255,0.85);
-            padding: 14px;
+            padding: 10px;
             border-radius: 14px;
             text-align: center;
-            width: 84px; /* Reduzido 30% */
+            width: 90px;
             box-shadow: 0 0 6px rgba(0,0,0,0.18);
         }
         .day-card h2 {
             color: #222;
-            font-size: 18px;
-            margin: 0 0 8px 0;
+            font-size: 14px;
+            margin: 0 0 6px 0;
         }
         .day-card img {
-            height: 60px; /* Tamanho original dos ícones */
-            margin-bottom: 10px;
+            height: 42px;
+            margin-bottom: 7px;
         }
         .day-card .temp {
             color: #222;
-            font-size: 27px; /* Temperatura aumentada em 30% */
+            font-size: 20px;
             font-weight: bold;
-            margin-top: 5px;
+            margin-top: 3px;
         }
     </style>
 </head>
