@@ -1,0 +1,33 @@
+name: Atualizar previsão do tempo
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # Executa todos os dias às 06:00 UTC (03:00 no Brasil)
+  workflow_dispatch:  # Permite execução manual
+
+jobs:
+  atualizar_previsao:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Executar script de previsão
+        run: python gerar_previsao.py
+
+      - name: Commit e push das alterações
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add index.html
+          git commit -m "Atualização automática da previsão do tempo" || echo "Sem alterações"
+          git push
